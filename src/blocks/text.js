@@ -26,31 +26,52 @@ const addText = {
   tooltip: '',
   helpUrl: '',
 };
+
 const testFieldColour ={
   type: 'test_field_colour',
   message0: 'colour: %1',
   args0: [
     {
       type: 'field_colour',
-      name: 'FIELDNAME',
-      colour: '#ff4040',
+      name: 'COLOUR',
+      colour: '#eb2c47',
       colourOptions: [
-        '#ff4040',
-        '#ff8080',
-        '#ffc0c0',
-        '#4040ff',
-        '#8080ff',
-        '#c0c0ff',
+        '#000000',
+        '#495057',
+        '#91979c',
+        '#f8f9fa',
+        '#eb2c47',
+        '#8b412e',
+        '#19b1f8',
+        '#1315e0',
+        '#fee610',
+        '#958c32',
+        '#2de13e',
+        '#1d9410',
+        '#f56dbb',
+        '#aa3ac5',
+        '#f57117',
+        '#00000000'
       ],
       colourTitles: [
-        'dark pink',
-        'pink',
-        'light pink',
-        'dark blue',
-        'blue',
-        'light blue',
+        '0',
+        'L',
+        '1',
+        '2',
+        '3',
+        'C',
+        '7',
+        '5',
+        '6',
+        'F',
+        '4',
+        'D',
+        '8',
+        'H',
+        '9',
+        '.'
       ],
-      columns: 3,
+      columns: 4,
     },
   ],
 };
@@ -58,6 +79,6 @@ const testFieldColour ={
 // This does not register their definitions with Blockly.
 // This file has no side effects!
 export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
-  addText,
   testFieldColour,
+  addText,
 ]);

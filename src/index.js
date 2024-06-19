@@ -13,6 +13,7 @@ import {toolbox} from './toolbox';
 import './index.css';
 import {registerFieldColour} from '@blockly/field-colour';
 
+registerFieldColour();
 // Register the blocks and generator with Blockly
 Blockly.common.defineBlocks(blocks);
 Object.assign(javascriptGenerator.forBlock, forBlock);
@@ -61,32 +62,32 @@ ws.addChangeListener((e) => {
   }
   runCode();
 });
-registerFieldColour();
-Blockly.Blocks['test_field_colour'] = {
-  init: function () {
-    this.appendDummyInput()
-      .appendField('colour: ')
-      .appendField(
-        new FieldColour('#ff4040', null, {
-          colourOptions: [
-            '#ff4040',
-            '#ff8080',
-            '#ffc0c0',
-            '#4040ff',
-            '#8080ff',
-            '#c0c0ff',
-          ],
-          colourTitles: [
-            'dark pink',
-            'pink',
-            'light pink',
-            'dark blue',
-            'blue',
-            'light blue',
-          ],
-          columns: 3,
-        }),
-        'COLOR',
-      );
-  },
-};
+
+// Blockly.Blocks['test_field_colour'] = {
+//   init: function () {
+//     this.appendDummyInput()
+//       .appendField('colour: ')
+//       .appendField(
+//         new FieldColour('#ff4040', null, {
+//           colourOptions: [
+//             '#ff4040',
+//             '#ff8080',
+//             '#ffc0c0',
+//             '#4040ff',
+//             '#8080ff',
+//             '#c0c0ff',
+//           ],
+//           colourTitles: [
+//             'dark pink',
+//             'pink',
+//             'light pink',
+//             'dark blue',
+//             'blue',
+//             'light blue',
+//           ],
+//           columns: 3,
+//         }),
+//         'COLOR',
+//       );
+//   },
+// };

@@ -631,11 +631,8 @@ export const toolbox = {
     {
       kind: 'category',
       name: 'Sprig',
-      categorystyle: 'sprig_category',
+      categorystyle: 'variable_category',
       contents: [
-        {
-          
-        }
       ]
     }
   ],
