@@ -625,5 +625,18 @@ export const toolbox = {
       categorystyle: 'procedure_category',
       custom: 'PROCEDURE',
     },
+    {
+      kind: 'sep',
+    },
+    {
+      kind: 'category',
+      name: 'Sprig',
+      categorystyle: 'sprig_category',
+      contents: [
+        {
+          
+        }
+      ]
+    }
   ],
 };

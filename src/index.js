@@ -11,6 +11,7 @@ import {javascriptGenerator} from 'blockly/javascript';
 import {save, load} from './serialization';
 import {toolbox} from './toolbox';
 import './index.css';
+import {registerFieldColour} from '@blockly/field-colour';
 
 // Register the blocks and generator with Blockly
 Blockly.common.defineBlocks(blocks);
@@ -60,3 +61,32 @@ ws.addChangeListener((e) => {
   }
   runCode();
 });
+registerFieldColour();
+Blockly.Blocks['test_field_colour'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField('colour: ')
+      .appendField(
+        new FieldColour('#ff4040', null, {
+          colourOptions: [
+            '#ff4040',
+            '#ff8080',
+            '#ffc0c0',
+            '#4040ff',
+            '#8080ff',
+            '#c0c0ff',
+          ],
+          colourTitles: [
+            'dark pink',
+            'pink',
+            'light pink',
+            'dark blue',
+            'blue',
+            'light blue',
+          ],
+          columns: 3,
+        }),
+        'COLOR',
+      );
+  },
+};
